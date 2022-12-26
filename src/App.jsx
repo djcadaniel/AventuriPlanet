@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import { Navbar } from './components'
+import { useState } from 'react';
+import { Navigation } from './routes';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Navbar />
+      <Navigation />
     </>
   )
 }
