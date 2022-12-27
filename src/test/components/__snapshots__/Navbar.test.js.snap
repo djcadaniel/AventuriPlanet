@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <NavBar /> Debe de hacer match con el snapshot 1`] = `
+<div>
+  <header
+    class="relative bg-green-300 h-24 flex z-50"
+  >
+    <nav
+      class="content flex flex-row md:h-auto justify-between items-center"
+    >
+      <div>
+        Logo
+      </div>
+      <button
+        class="text-2xl md:hidden transition-all ease-in-out"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"
+          />
+        </svg>
+      </button>
+      <div
+        class="opacity-0 md:hidden fixed inset-0 top-24 bg-gray-600/50 backdrop-blur-sm h-[calc(100vh-96px)]"
+      />
+      <ul
+        class="-left-full md:left-0 absolute md:relative inset-0 top-24 md:top-0 w-3/5 md:w-auto h-[calc(100vh-96px)] md:h-auto flex flex-col md:flex-row items-center justify-center bg-red-300 transition-all ease-in-out"
+      >
+        <a
+          class="mb-5 md:ml-5"
+          href="/"
+        >
+          Inicio
+        </a>
+        <a
+          class="mb-5 md:ml-5"
+          href="/clases"
+        >
+          Clases
+        </a>
+        <a
+          class="mb-5 md:ml-5"
+          href="/especialidades"
+        >
+          Especialidades
+        </a>
+        <a
+          class="mb-5 md:ml-5"
+          href="/nosotros"
+        >
+          Nosotros
+        </a>
+        <a
+          class="mb-5 md:ml-5"
+          href="/contactanos"
+        >
+          Contactanos
+        </a>
+      </ul>
+    </nav>
+  </header>
+</div>
+`;

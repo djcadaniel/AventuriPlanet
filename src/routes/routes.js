@@ -27,10 +27,5 @@ export const routes = [
     path : '/contactanos',
     layout : MainLayout,
     component : Contactanos
-  },
-  {
-    path : '/*',
-    layout : MainLayout,
-    component : PageError
   }
 ]
