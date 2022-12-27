@@ -12,6 +12,11 @@ export const Navbar = () => {
     setMenu(!menu)
     console.log(menu);
   }
+  const onMenu2 =()=>{
+    if(!menu){
+      setMenu(!menu)
+    }
+  }
 
   return (
     <header className='relative bg-green-300 h-24 flex z-50'>
@@ -22,9 +27,12 @@ export const Navbar = () => {
           onClick={onMenu}
         >
           {menu ? <BiMenu/> : <IoMdClose/> }
-          
         </button>
-        <div className={`${menu && "bg-white "} md:hidden fixed inset-0 top-24 bg-gray-600/50 backdrop-blur-sm h-[calc(100vh-96px)]`}></div>
+        <div 
+          className={`${menu && "opacity-0"} md:hidden fixed inset-0 top-24 bg-gray-600/50 backdrop-blur-sm h-[calc(100vh-96px)]`}
+          onClick={(menu)=>onMenu2(menu)}
+        >
+        </div>
         <ul className={`${menu && '-left-full md:left-0'} absolute md:relative inset-0 top-24 md:top-0 w-3/5 md:w-auto h-[calc(100vh-96px)] md:h-auto flex flex-col md:flex-row items-center justify-center bg-red-300 transition-all ease-in-out`}>
           {
             listMenu.map((item, index) => (
@@ -32,6 +40,7 @@ export const Navbar = () => {
                 key={index}
                 to = {item.path}
                 className='mb-5 md:ml-5'
+                onClick={onMenu}
               >
                 {item.nameRuta}
               </Link>
