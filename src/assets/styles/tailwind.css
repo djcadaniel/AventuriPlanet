@@ -1,5 +1,10 @@
 @tailwind base;
 @tailwind components;
+
+.titleComponent{
+  @apply text-3xl font-Montserrat font-bold text-secondary
+}
+
 @tailwind utilities;
 .content{
   max-width: 1200px;

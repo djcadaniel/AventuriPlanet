@@ -1,6 +1,5 @@
 import { MainLayout } from "../layout"
-import { Clases, Contactanos, Especialidades, Home, Nosotros } from "../pages"
-import { PageError } from "../pages/PageError"
+import { Clases, Contactanos, Especialidades, Home, Nosotros,Generales } from "../pages";
 
 export const routes = [
   {
@@ -27,5 +26,10 @@ export const routes = [
     path : '/contactanos',
     layout : MainLayout,
     component : Contactanos
+  },
+  {
+    path : '/generales',
+    layout : MainLayout,
+    component : Generales
   }
 ]

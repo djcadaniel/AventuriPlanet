@@ -19,10 +19,14 @@ export const Navbar = () => {
   }
 
   return (
-    <header className=' relative bg-primary h-24 flex z-50'>
-      <nav className='content  md:h-auto '>
-        <div className='fixed top-0 left-0 right-0 flex flex-row justify-between items-center h-24 bg-primary px-5'>
-          <div className='text-text-blanco'>Logo</div>
+    <header className='sticky inset-0 lg:block md:relative bg-primary h-24 flex z-50 font-Montserrat'>
+      <nav className='content  md:h-auto'>
+        <div className=' flex flex-row justify-between items-center h-24 bg-primary px-5'>
+          <div className='text-text-blanco'>
+            <Link to='/'>
+            Logo
+            </Link>
+          </div>
           <button 
             className='text-2xl md:hidden transition-all ease-in-out'
             onClick={onMenu}
@@ -30,11 +34,11 @@ export const Navbar = () => {
             {menu ? <div className='text-white'><BiMenu /></div> : <div className='text-white'><IoMdClose /></div> }
           </button>
           <div 
-            className={`${menu && "opacity-0"} md:hidden fixed inset-0 top-24 bg-gray-600/50 backdrop-blur-sm h-[calc(100vh-96px)]`}
-            onClick={(menu)=>onMenu2(menu)}
+            className={`${menu && "opacity-0"} md:hidden fixed inset-0 top-20 bg-green-600/50 backdrop-blur-sm min-h-screen`}
+            onClick={onMenu2}
           >
           </div>
-          <ul className={`${menu && '-left-full md:left-0'} absolute md:relative inset-0 top-24 md:top-0 w-3/5 md:w-auto h-[calc(100vh-96px)] md:h-auto flex flex-col items-center justify-center md:flex-row transition-all ease-in-out text-text-blanco bg-primary`}>
+          <ul className={`${menu && '-left-full md:left-0'} absolute md:relative inset-0 md:top-0 w-3/5 md:w-auto h-[calc(100vh-0px)] md:h-auto flex flex-col items-center justify-center md:flex-row transition-all ease-in-out text-text-blanco bg-primary`}>
             {
               listMenu.map((item, index) => (
                 <div key={index}>

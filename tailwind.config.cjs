@@ -5,9 +5,22 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors:{
-        'primary' : '#1A045D',
-        'text-blanco' : 'white'
+      backgroundImage : {
+
+      },
+      backgroundColor: theme =>({
+        ...theme('colors'),
+        'primary' : 'blue',
+        'secondary' : 'red',
+        'terciary' : 'green',
+        'btn' : 'orange'
+      }),
+      textColor : {
+        'primary' : 'white',
+        'secondary' : 'black'
+      },
+      fontFamily:{
+        Montserrat : ['Montserrat',  'sans-serif']
       }
     },
   },
